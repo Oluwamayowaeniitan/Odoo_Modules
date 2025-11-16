@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="wallet_fund_page" name="Fund Wallet">
+        <t t-call="website.layout">
+            <div class="container mt-5 mb-5">
+                <h2>Fund Your eWallet</h2>
+                <form action="/wallet/fund/submit" method="post" class="mt-4">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" required="required" class="form-control"/>
+                    </div>
+
+                    <div class="mt-3">
+                        <label>Email</label>
+                        <input type="email" name="email" required="required" class="form-control"/>
+                    </div>
+
+                    <div class="mt-3">
+                        <label>Amount</label>
+                        <input type="number" name="amount" required="required" class="form-control"/>
+                    </div>
+
+                    <div class="mt-4">
+                        <button class="btn btn-primary">Proceed to Paystack</button>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

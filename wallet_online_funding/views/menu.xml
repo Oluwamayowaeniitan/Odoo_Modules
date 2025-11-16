@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem id="wallet_menu_root" name="Wallet Funding" parent="contacts.menu_contacts" />
+
+    <record id="wallet_log_tree" model="ir.ui.view">
+        <field name="name">wallet.log.tree</field>
+        <field name="model">wallet.fund.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="reference"/>
+                <field name="amount"/>
+                <field name="partner_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="wallet_log_menu" name="Funding Logs"
+              parent="wallet_menu_root" action="wallet_log_action"/>
+
+    <record id="wallet_log_action" model="ir.actions.act_window">
+        <field name="name">Funding Logs</field>
+        <field name="res_model">wallet.fund.log</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
