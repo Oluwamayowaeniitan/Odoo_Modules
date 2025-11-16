@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="param_paystack_public" model="ir.config_parameter">
+        <field name="key">wallet_online_funding.paystack_public_key</field>
+        <field name="value">pk_test_1edf31a7f8cfeb4ca586af1a56645a1e798b4e61</field>
+    </record>
+
+    <record id="param_paystack_secret" model="ir.config_parameter">
+        <field name="key">wallet_online_funding.paystack_secret_key</field>
+        <field name="value">sk_test_8eba7d3904c4e3ec6fc286da5f09463962602bf7</field>
+    </record>
+
+</odoo>
